@@ -7,7 +7,8 @@ import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
-public class ObjectRequestDto {
-    @NotBlank(message = "El nombre es requerido")
-    private String name;
+public class CategoryRequestDto extends ObjectRequestDto{
+
+    @NotBlank(message = "La descripcion es requerida")
+    private String description;
 }

@@ -45,7 +45,7 @@ public class BeanConfiguration {
 
     @Bean
     public IDishPersistencePort dishPersistencePort(){
-        return new DishJpaAdapter(dishRepository, dishEntityMapper);
+        return new DishJpaAdapter(dishRepository, categoryRepository, restaurantRepository, dishEntityMapper, categoryEntityMapper, restaurantEntityMapper);
     }
 
     @Bean

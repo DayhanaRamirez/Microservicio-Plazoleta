@@ -14,7 +14,7 @@ public class RestaurantUpdateRequestDto {
     @NotNull(message = "El id del restaurante es requerido")
     private Long id;
 
-    @Pattern(regexp = "^(?=.*[a-zA-Z])[a-zA-Z0-9]+$", message = "El nombre debe contener al menos una letra")
+    @Pattern(regexp = "^(?=.*[a-zA-Z])[a-zA-Z0-9 ]+$", message = "El nombre debe contener al menos una letra")
     @NotBlank(message = "El nombre es requerido")
     private String name;
 

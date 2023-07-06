@@ -25,8 +25,9 @@ public class DishHandler implements IDishHandler {
 
     @Override
     public void saveDish(DishRequestDto dishRequestDto) {
-        dishServicePort.saveDish(objectRequestMapper.dishDtoToDish(dishRequestDto));
-
+        Dish dish = objectRequestMapper.dishDtoToDish(dishRequestDto);
+        dish.setActive(true);
+        dishServicePort.saveDish(dish);
     }
 
     @Override

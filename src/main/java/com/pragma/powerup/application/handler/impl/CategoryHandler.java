@@ -41,7 +41,7 @@ public class CategoryHandler implements ICategoryHandler {
     @Override
     public void updateCategory(CategoryUpdateRequestDto categoryUpdateRequestDto) {
         Category category = categoryServicePort.getCategory(categoryUpdateRequestDto.getId());
-        category.setName(category.getName());
+        category.setName(categoryUpdateRequestDto.getName());
         category.setDescription(categoryUpdateRequestDto.getDescription());
 
         categoryServicePort.updateCategory(category);

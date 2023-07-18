@@ -1,5 +1,6 @@
 package com.pragma.powerup.infrastructure.out.jpa.mapper;
 
+import com.pragma.powerup.application.dto.response.RestaurantPaginationResponseDto;
 import com.pragma.powerup.domain.model.Restaurant;
 import com.pragma.powerup.infrastructure.out.jpa.entity.RestaurantEntity;
 import org.mapstruct.Mapper;
@@ -15,4 +16,6 @@ public interface IRestaurantEntityMapper {
     Restaurant entityToRestaurant(RestaurantEntity restaurantEntity);
 
     List<Restaurant> entitiesToRestaurantList(List<RestaurantEntity> restaurantEntityList);
+
+    List<RestaurantPaginationResponseDto> entityToPagination(List<RestaurantEntity> restaurantEntityList);
 }

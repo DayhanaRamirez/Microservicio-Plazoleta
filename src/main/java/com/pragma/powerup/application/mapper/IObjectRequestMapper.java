@@ -2,9 +2,11 @@ package com.pragma.powerup.application.mapper;
 
 import com.pragma.powerup.application.dto.request.CategoryRequestDto;
 import com.pragma.powerup.application.dto.request.DishRequestDto;
+import com.pragma.powerup.application.dto.request.OrderRequestDto;
 import com.pragma.powerup.application.dto.request.RestaurantRequestDto;
 import com.pragma.powerup.domain.model.Category;
 import com.pragma.powerup.domain.model.Dish;
+import com.pragma.powerup.domain.model.Order;
 import com.pragma.powerup.domain.model.Restaurant;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
@@ -18,4 +20,6 @@ public interface IObjectRequestMapper {
     Category  categoryDtoToCategory(CategoryRequestDto categoryRequestDto);
 
     Dish dishDtoToDish(DishRequestDto dishRequestDto);
+
+    Order orderDtoToOrder(OrderRequestDto orderRequestDto);
 }

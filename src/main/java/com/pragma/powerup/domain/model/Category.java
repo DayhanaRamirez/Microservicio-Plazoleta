@@ -1,5 +1,7 @@
 package com.pragma.powerup.domain.model;
 
+import lombok.Builder;
+
 public class Category extends ObjectModel{
     private String description;
 

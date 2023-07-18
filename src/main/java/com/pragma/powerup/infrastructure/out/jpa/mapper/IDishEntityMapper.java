@@ -1,5 +1,6 @@
 package com.pragma.powerup.infrastructure.out.jpa.mapper;
 
+import com.pragma.powerup.application.dto.response.DishPaginationResponseDto;
 import com.pragma.powerup.domain.model.Dish;
 import com.pragma.powerup.infrastructure.out.jpa.entity.DishEntity;
 import org.mapstruct.Mapper;
@@ -15,4 +16,14 @@ public interface IDishEntityMapper {
 
     Dish entityToDsh(DishEntity dishEntity);
 
-    List<Dish> entitiesToDishList(List<DishEntity> dishEntityList);}
+    List<Dish> entitiesToDishList(List<DishEntity> dishEntityList);
+
+    List<DishPaginationResponseDto> entityToPagination(List<DishEntity> dishEntityList);
+
+}
+
+
+
+
+
+
